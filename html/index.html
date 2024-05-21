@@ -1,40 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css"> 
+    <link rel="stylesheet" href="../css/style.css">
     <title>Ruan Gabriel - Portfólio</title>
 </head>
-<body>
-    <header>
-        <h1>Meu Portfólio</h1>
-    </header>
-    
-    <nav>
-        <ul>
-            <li><a href="projetos.html">Projetos</a></li>
-        </ul>
-    </nav>
-    <section id="projects">
-        <h2>Projetos</h2>
-    </section>
-    <!-- Modo Dark -->
-    <div class="bg-white dark:bg-slate-800 rounded-lg px-6 py-8 ring-1 ring-slate-900/5 shadow-xl">
-        <div>
-          <span class="inline-flex items-center justify-center p-2 bg-indigo-500 rounded-md shadow-lg">
-            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><!-- ... --></svg>
-          </span>
-        </div>
-        <h3 class="text-slate-900 dark:text-white mt-5 text-base font-medium tracking-tight">Writes Upside-Down</h3>
-        <p class="text-slate-500 dark:text-slate-400 mt-2 text-sm">
-          The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
-        </p>
+<body class="font-sans bg-gray-900 text-white">
+    <div class="pf-top w-full fixed top-0 bg-gray-800">
+        <nav class="flex justify-center space-x-8 p-4">
+            <a href="#" class="nav-link">Sobre Mim</a>
+            <a href="#" class="nav-link">Linguagens</a>
+            <a href="#" class="nav-link">Projetos</a>
+            <a href="#" class="nav-link">Contato</a>
+            <div id="indicator" class="absolute h-1 bg-green-500 transition-all duration-500"></div>
+        </nav>
     </div>
-    <footer>
-        <p>&copy; 2024 Meu Portfólio</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="pt-20 px-8">
+        <div class="bg-beige rounded-lg p-8">
+            <div class="container mx-auto flex items-center">
+                <div class="w-1/3">
+                    <img class="rounded-full" src="../img/foto-perfil.png" alt="Foto de perfil">
+                </div>
+                <div class="w-2/3 pl-8">
+                    <h1 class="text-3xl mb-4">Sobre Mim</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias quia quam voluptatibus, necessitatibus maiores libero nesciunt nobis deserunt facere enim quasi aut distinctio ipsam animi vero optio repudiandae dolorem. Animi.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pt-20 px-8">
+        <div id="linguagens" class="">
+            <div>
+                <div class="w-2/3 pl-8">
+                    <h1 class="text-3xl mb-4">Linguagens</h1>
+                    
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script src="../js/script.js"></script>
 </body>
 </html>
