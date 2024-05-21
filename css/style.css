@@ -1,71 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
+    font-size: 1rem;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+/* HEADER */
+.pf-top {
+    top: 0;
+    position: fixed;
+    width: 100%;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
+nav {
+    position: relative;
+    display: flex;
+    gap: 30px;
+    background-color: #222327;
+    padding: 15px 60px;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-nav ul li a {
+nav a {
+    position: relative;
+    color: #999;
     text-decoration: none;
-    color: #333;
+    font-size: 1.5em;
+    z-index: 2;
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 30px;
+    transition: 0.5s;
 }
 
-section {
-    padding: 50px 20px;
+nav a.active {
+    color: blueviolet;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
+#indicator {
+    position: absolute;
+    height: 5px;
+    background-color: #29fc63;
+    z-index: 1;
+    width: 0;
+    transition: 0.5s;
 }
 
-/* animacao */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+#indicator::before, #indicator::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: #29fc63;
+    border-radius: 50%;
+    transition: 0.5s;
 }
 
-.fadeIn {
-    animation: fadeIn 1s ease-in-out;
+#indicator::before {
+    left: -30px;
 }
-/** @type {import('tailwindcss').Config} */
-module.exports = {
-    theme: {
-      colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        'white': '#ffffff',
-        'purple': '#3f3cbb',
-        'midnight': '#121063',
-        'metal': '#565584',
-        'tahiti': '#3ab7bf',
-        'silver': '#ecebff',
-        'bubble-gum': '#ff77e9',
-        'bermuda': '#78dcca',
-      },
-    },
-  }
-   
+
+#indicator::after {
+    right: -30px;
+}
+
+#indicator.change::before {
+    left: -10px;
+}
+
+#indicator.change::after {
+    right: -10px;
+}
+
+/* UTILITARIOS */
+.pt-20 {
+    padding-top: 5rem;
+}
+
+.px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
