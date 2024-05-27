@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Ruan Gabriel - Portfólio</title>
+</head>
+<body class="font-sans bg-gray-900 text-white">
+    <header class="pf-top w-full bg-gray-800">
+        <nav class="flex justify-center space-x-8 p-4">
+            <a href="#sobremim" class="nav-link">Sobre Mim</a>
+            <a href="#linguagens" class="nav-link">Linguagens</a>
+            <a href="#projetos" class="nav-link">Projetos</a>
+            <a href="#contato" class="nav-link">Contato</a>
+            <div id="indicator" class="absolute h-1 bg-green-500 transition-all duration-500"></div>
+        </nav>
+    </header>
+    <div class="px-8">
+        <div id="sobremim" class="bg-beige rounded-lg p-8">
+            <div class="container mx-auto flex items-center">
+                <div class="w-1/3">
+                    <img class="rounded-full" src="./img/foto_perfil.jpg" alt="Foto de perfil">
+                </div>
+                <div class="w-2/3 pl-8">
+                    <h1 class="text-3xl mb-4">Sobre Mim</h1>
+                    <p>
+                        </>
+                        Olá, me chamo Ruan Bueno e bem-vindo ao meu Portfólio! Trabalho com Gestão de Tráfego e Conversão e desenvolvimento
+                         front-end, mas possuo conhecimento básico para fullstack. Confira meu curriculo abaixo ou acesse meus projetos.
+                        </>
+                    </p>
+                    <div class="pt-20 px-8">
+                        <div id="contato" class="">
+                            <div>
+                                <div class="w-2/3 pl-8">
+                                    <a href="https://github.com/rbxyz">
+                                        <ion-icon class="large-icon" name="logo-github"></ion-icon>
+                                    </a>
+                                    <a href="https://www.instagram.com/rb_rs_/">
+                                        <ion-icon class="large-icon icon-1" name="logo-instagram"></ion-icon>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/ruan-bueno-68929923a/">
+                                        <ion-icon class="large-icon icon-1" name="logo-linkedin"></ion-icon>
+                                    </a>
+                                    <a href="https://drive.google.com/uc?export=download&id=1evJ_W_mfpsh5r-mGpYWpN8l30QRufnI1">
+                                        <ion-icon class="large-icon icon-1 pl-16" name="cloud-download-outline"></ion-icon>                                    </a>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="px-8">
+        <div id="linguagens" class="">
+                <h1 class="text-3xl mb-4"> < Linguagens /> </h1>
+            <div class="flex-align">
+                <div class="parent card1">
+                    <div class="card">
+                        <div class="content-box">
+                            <h1 class="card-title">HTML</h1>
+                            <p class="card-content">
+                                HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores.</p>
+                            <span class="see-more">Veja os projetos</span>
+                        </div>
+                        <div class="date-box">
+                            <ion-icon class="large-icon icon-2" name="logo-html5"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="parent card2">
+                    <div class="card">
+                        <div class="content-box">
+                            <h1 class="card-title">CSS</h1>
+                            <p class="card-content">
+                                Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags style. </p>
+                            <span class="see-more">Veja os projetos</span>
+                        </div>
+                        <div class="date-box">
+                            <ion-icon class="large-icon icon-2" name="logo-css3"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="parent card3">
+                    <div class="card">
+                        <div class="content-box">
+                            <h1 class="card-title">JavaScript</h1>
+                            <p class="card-content">
+                                JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.                            </p>
+                            <span class="see-more">Veja os projetos</span>
+                        </div>
+                        <div class="date-box">
+                            <ion-icon class="large-icon icon-2" name="logo-javascript"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+                <div class="parent card4">
+                    <div class="card">
+                        <div class="content-box">
+                            <h1 class="card-title">Node.js</h1>
+                            <p class="card-content">
+                                Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.                            </p>
+                            <span class="see-more">Veja os projetos</span>
+                        </div>
+                        <div class="date-box">
+                            <ion-icon class="large-icon icon-2" name="logo-nodejs"></ion-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <div id="projetos" class="pt-20 px-8">
+        <!-- 
+        <h2 class="text-3xl mb-4">< Projetos /></h2>
+        <div class="grid grid-cols-4 gap-4">
+            <div class="project-card">
+                <img src="https://via.placeholder.com/300x200" alt="Pré-visualização do site" class="project-image">
+                <h3 class="text-xl mb-2">Projeto 1</h3>
+                <p class="mb-2">Descrição curta do projeto.</p>
+                <a href="https://meuprojetoexemplo1.com" class="text-blue-500 hover:text-blue-700" target="_blank">Visite o site</a>
+            </div>
+            -->
+    </div>
+
+    <script src="./js/script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        
+</body>
+</html>
