@@ -5,21 +5,22 @@ body {
     margin: 0;
     padding: 0;
     font-size: 1rem;
+    padding-top: 60px; /* Espaço para o cabeçalho fixo */
 }
 
-/* HEADER */
-.pf-top {
-    top: 0;
+header, .pf-top {
     position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 1000;
+    background-color: #222327;
 }
 
 nav {
-    position: relative;
     display: flex;
     gap: 30px;
-    background-color: #222327;
     padding: 15px 60px;
+    background-color: #222327;
 }
 
 nav a {
@@ -33,11 +34,160 @@ nav a {
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    transition: 0.5s;
+    transition: color 0.3s ease;
 }
 
-nav a.active {
+nav a:active {
     color: blueviolet;
+    transform: scale(0.95);
+}
+
+
+/* Linguagens */
+.large-icon {
+    font-size: 48px;
+}
+
+.icon-1 {
+    margin-left: 20px;
+}
+
+.container-linguagens {
+    display: inline-flex;
+}
+
+.container {
+    padding: 50px 0px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.parent {
+    height: 400px;
+    width: 300px;
+    padding: 20px;
+    perspective: 1000px;
+}
+
+.card {
+    padding-top: 100px;
+    transform-style: preserve-3d;
+    background-image: url("https://images.pexels.com/photos/1629236/pexels-photo-1629236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position: center center;
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 10px;
+}
+
+.card:hover {
+    background-position: 80% 20%;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+}
+
+.content-box {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.811);
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: rgba(0, 115, 255, 0.925) 0px 20px 50px -25px;
+    transition: all 0.5s ease-in-out;
+    padding: 50px 25px 25px 25px;
+    transform-style: preserve-3d;
+}
+
+.content-box .card-title {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .card-title:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .card-content {
+    padding-top: 15px;
+    font-size: 12px;
+    color: #b9b9b9;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .card-content:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.content-box .see-more {
+    display: block;
+    font-weight: 900;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #0088ff;
+    padding-top: 15px;
+    transition: all 0.5s ease-in-out;
+    transform: translate3d(0px, 0px, 20px);
+}
+
+.content-box .see-more:hover {
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.date-box {
+    position: absolute;
+    top: 75px;
+    left: 25px;
+    height: 60px;
+    width: 60px;
+    background-color: black;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: #0066ff 0px 20px 60px 0px, #00c8ff 0px 18px 36px -18px;
+    transform: translate3d(0px, 0px, 50px);
+}
+
+.date-box span {
+    display: block;
+    text-align: center;
+}
+
+.date-box .month {
+    color: white;
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.date-box .date {
+    font-size: 20px;
+    font-weight: 900;
+    color: #0088ff;
+}
+.card{
+    filter: hue-rotate(60deg);
+}
+.card2 {
+    filter: hue-rotate(150deg);
+}
+
+.card3 {
+    filter: hue-rotate(300deg);
+}
+
+.card4 {
+    filter: hue-rotate(90deg);
+}
+
+
+.flex-align {
+    display: flex;
+}
+
+.icon-2 {
+    align-items: center;
 }
 
 #indicator {
@@ -49,7 +199,8 @@ nav a.active {
     transition: 0.5s;
 }
 
-#indicator::before, #indicator::after {
+#indicator::before,
+#indicator::after {
     content: '';
     position: absolute;
     width: 15px;
@@ -75,6 +226,55 @@ nav a.active {
     right: -10px;
 }
 
+/* PROJETOS */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+}
+
+.project-card p {
+    color: #b3b3b3;
+    margin-bottom: 1rem;
+}
+
+.project-card a {
+    color: #29fc63;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.project-card a:hover {
+    color: #1f9c4c;
+}
+
+
 /* UTILITARIOS */
 .pt-20 {
     padding-top: 5rem;
@@ -84,4 +284,3 @@ nav a.active {
     padding-left: 2rem;
     padding-right: 2rem;
 }
-
